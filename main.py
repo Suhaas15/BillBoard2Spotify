@@ -2,15 +2,19 @@ from bs4 import BeautifulSoup
 import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Declaring needed Variables
 Spotifyusername = "Suhaas"
 year = input("What year would you like to travel to in YYYY-MM-DD? ")
 URL = f"https://www.billboard.com/charts/hot-100/{year}"
-Redirect_URL = "https://example.com"
+Redirect_URL = os.environ.get("REDIRECT_URL")
 scope = "playlist-modify-private playlist-modify-public"
-CLIENT_ID="ee6a0bde8c8f4080ad031a7586dfba50"
-CLIENT_SECRET="74ddd77a3fa2432cb78ca24a5c187ce7"
+CLIENT_ID=os.environ["CLIENT_ID"]
+CLIENT_SECRET=os.environ["CLIENT_SECRET"]
 
 # SCRAPING BILLBOARD TOP 100 CHARTS WITH BEAUTIFUL SOUP
 headers = {
