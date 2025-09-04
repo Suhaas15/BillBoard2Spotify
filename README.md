@@ -94,7 +94,7 @@ I’ve always believed that *music is a time machine*. One song can instantly ta
 ---
 
 ## 📸 Demo  
-*(Add a screenshot or GIF of your playlist here)*  
+*![Spotify Screenshot](assets/screenshot.png)*  
 
 ---
 
